@@ -7,6 +7,7 @@ end
 
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
+gem 'haml-rails'
 gem 'instagram'
 gem 'jbuilder', '~> 2.5'
 gem 'pg', '~> 0.18'
@@ -36,6 +37,7 @@ group :test do
 end
 
 group :development do
+  gem 'html2haml'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop'
   gem 'spring'
