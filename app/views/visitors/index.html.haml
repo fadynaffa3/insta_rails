@@ -1,0 +1,5 @@
+.jumbotron
+  - if session[:access_token].present?
+    %a.btn{href: instagram_feed_path} Go To your Instagarm Feed
+  - else
+    %a.btn{href: authentication_redirect_path} Login With Instagram

@@ -1,7 +1,9 @@
 class InstagramFeedsController < ApplicationController
+  before_action :validate_instagram_token
+
   def show
-    return unless current_user.has_instagram
-    flash[:error] = 'Please Connect your Instagram'
-    redirect_to instagram_connect_path
+    client = Instagram.client(access_token: session[:access_token])
+    @user  = client.user
+    @media = client.user_recent_media
   end
 end
