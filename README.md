@@ -1,24 +1,28 @@
-# README
+# InstaRails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Summary
+-------
 
-Things you may want to cover:
+This is a simple application that allows you to connect your Instagram account and browse your pictures 
 
-* Ruby version
+Setup
+-----
+```
+git clone git@github.com:fadynaffa3/insta-rails.git
+or
+git clone https://github.com/fadynaffa3/insta-rails.git
 
-* System dependencies
+cd insta-rails
 
-* Configuration
+bundle install
 
-* Database creation
+bundle exec rails server
 
-* Database initialization
+visit localhost:3000 on your browser
 
-* How to run the test suite
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Testing
+-------
 
-* Deployment instructions
-
-* ...
+TODO
