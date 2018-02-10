@@ -13,7 +13,6 @@ gem 'instagram'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
-gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'rails', '~> 5.1.4'
 gem 'sass-rails', '~> 5.0'
@@ -29,7 +28,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'guard'

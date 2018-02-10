@@ -1,2 +1,4 @@
-- @media.each do |media_item|
-  = image_tag media_item.images.thumbnail.url
+.row
+  - @media.each do |media_item|
+    .col-xs-12.col-sm-6.col-md-4.margin-bottom-s
+      = image_tag media_item.images.standard_resolution.url, width: '100%'
