@@ -1,4 +1,14 @@
+- content_for :javascript_includes do
+  = javascript_include_tag 'instagram_feed'
 .row
   - @media.each do |media_item|
-    .col-xs-12.col-sm-6.col-md-4.margin-bottom-s
-      = image_tag media_item.images.standard_resolution.url, width: '100%'
+    .col-xs-12.col-sm-6.col-md-4.margin-bottom-s{ 'data-caption': media_item.caption.try(:text) }
+      = image_tag media_item.images.standard_resolution.url, width: '100%', class: 'image-feed clickable'
+
+#imageZoom.modal.fade{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} ×
+      .modal-body
